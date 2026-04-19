@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import IntroScreen from './components/IntroScreen/IntroScreen'
+import Hero from './components/Hero/Hero'
 
 function App() {
   const [intro, setIntro] = useState(true)
@@ -9,8 +10,9 @@ function App() {
   }
 
   return (
-    <main style={{ background: '#050505', minHeight: '100vh', color: '#f5f5f5' }}>
-      {/* portfólio — próximas secções aqui */}
+    <main style={{ background: '#050505' }}>
+      <Hero />
+      {/* próximas secções aqui */}
     </main>
   )
 }
