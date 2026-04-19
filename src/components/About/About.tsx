@@ -3,9 +3,9 @@ import { motion, useInView, animate } from 'framer-motion'
 import styles from './About.module.css'
 
 const STATS = [
-  { label: 'Anos de Experiência', value: 3, suffix: '+' },
-  { label: 'Projetos Concluídos',  value: 20, suffix: '+' },
-  { label: 'Commits',              value: 500, suffix: '+' },
+  { label: 'Anos de Formação', value: 3, suffix: '+' },
+  { label: 'Projetos Concluídos', value: 10, suffix: '+' },
+  { label: 'Tecnologias', value: 15, suffix: '+' },
 ]
 
 function Counter({ value, suffix }: { value: number; suffix: string }) {
@@ -89,10 +89,11 @@ export default function About() {
             variants={fadeUp}
             custom={2}
           >
-            Sou um desenvolvedor apaixonado por construir experiências digitais que combinam
-            performance e estética. O meu foco principal é o desenvolvimento web moderno com
-            React e TypeScript, mas tenho também interesse em Inteligência Artificial e
-            Visão Computacional — áreas que explorei em projetos académicos e pessoais.
+            Estudante finalista do Curso Técnico de Gestão e Programação de Sistemas
+            Informáticos, com experiência real em desenvolvimento web full-stack e contexto
+            empresarial. Apaixonado por tecnologia e cada vez mais focado em Inteligência
+            Artificial — acredito que o futuro do desenvolvimento está na intersecção entre
+            software funcional e sistemas inteligentes.
           </motion.p>
 
           <motion.p
@@ -102,9 +103,9 @@ export default function About() {
             variants={fadeUp}
             custom={3}
           >
-            Acredito que bom código é código legível, manutenível e que resolve problemas reais.
-            Quando não estou a programar, estou a aprender — seja através de projetos, cursos
-            ou da comunidade open source.
+            Orientado para aprender rápido, resolver problemas e contribuir desde o primeiro dia.
+            Tenho experiência com React, PHP, MySQL, OutSystems e Python, e desenvolvi o projeto
+            de fim de curso Roomly — uma aplicação web completa de gestão de salas escolares.
           </motion.p>
 
           {/* Contadores */}

@@ -146,23 +146,75 @@ const AiSvg = () => (
   </svg>
 )
 
+const PhpSvg = () => (
+  <svg viewBox="0 0 256 134">
+    <ellipse cx="128" cy="67" rx="128" ry="67" fill="#8892bf" />
+    <ellipse cx="128" cy="67" rx="112" ry="55" fill="#232531" />
+    <path fill="#8892bf" d="M68 87l6-30h14c8 0 13 4 12 11-2 9-9 13-18 13H74l-2 6H68zm8-10h9c5 0 8-2 9-7 1-3-1-5-6-5h-9l-3 12zM108 57h8l-2 9h12l2-9h8l-6 30h-8l2-11h-12l-2 11h-8l6-30zM148 87l6-30h14c8 0 13 4 12 11-2 9-9 13-18 13h-8l-2 6h-4zm8-10h9c5 0 8-2 9-7 1-3-1-5-6-5h-9l-3 12z" />
+  </svg>
+)
+
+const TailwindSvg = () => (
+  <svg viewBox="0 0 256 154" fill="none">
+    <defs>
+      <linearGradient id="tw1" x1="-2.778%" y1="32%" x2="100%" y2="68%">
+        <stop offset="0%" stopColor="#2298BD" />
+        <stop offset="100%" stopColor="#0ED7B5" />
+      </linearGradient>
+    </defs>
+    <path fill="url(#tw1)" d="M128 0C93.867 0 72.533 17.067 64 51.2 76.8 34.133 91.733 27.733 108.8 32c9.737 2.434 16.697 9.499 24.401 17.318C145.751 62.057 160.275 76.8 192 76.8c34.133 0 55.467-17.067 64-51.2-12.8 17.067-27.733 23.467-44.8 19.2-9.737-2.434-16.697-9.499-24.401-17.318C174.249 14.743 159.725 0 128 0zM64 76.8C29.867 76.8 8.533 93.867 0 128c12.8-17.067 27.733-23.467 44.8-19.2 9.737 2.434 16.697 9.499 24.401 17.318C81.751 138.857 96.275 153.6 128 153.6c34.133 0 55.467-17.067 64-51.2-12.8 17.067-27.733 23.467-44.8 19.2-9.737-2.434-16.697-9.499-24.401-17.318C110.249 91.543 95.725 76.8 64 76.8z" />
+  </svg>
+)
+
+const OutSystemsSvg = () => (
+  <svg viewBox="0 0 100 100" fill="none">
+    <rect width="100" height="100" rx="16" fill="#e3001b" />
+    <path d="M50 18c-17.673 0-32 14.327-32 32s14.327 32 32 32 32-14.327 32-32-14.327-32-32-32zm0 10c12.15 0 22 9.85 22 22s-9.85 22-22 22-22-9.85-22-22 9.85-22 22-22z" fill="#fff" />
+    <circle cx="50" cy="50" r="10" fill="#fff" />
+  </svg>
+)
+
+const AzureSvg = () => (
+  <svg viewBox="0 0 256 241">
+    <defs>
+      <linearGradient id="az1" x1="58.5%" y1="-12.8%" x2="40%" y2="100%">
+        <stop offset="0%" stopColor="#114A8B" />
+        <stop offset="100%" stopColor="#0669BC" />
+      </linearGradient>
+      <linearGradient id="az2" x1="55%" y1="55%" x2="44.3%" y2="96.1%">
+        <stop offset="0%" stopColor="#0078D4" />
+        <stop offset="100%" stopColor="#2D87C3" stopOpacity="0" />
+      </linearGradient>
+      <linearGradient id="az3" x1="37%" y1="14.3%" x2="62.9%" y2="100%">
+        <stop offset="0%" stopColor="#1490DF" />
+        <stop offset="100%" stopColor="#1F6FB2" />
+      </linearGradient>
+    </defs>
+    <path fill="url(#az1)" d="M89 0l84.6 0L96.7 211.8 12.5 211.8z" transform="translate(0 14)" />
+    <path fill="#0078D4" d="M183.8 135.5l-61.1 0 52.3-48.9 27.8-49.9z" transform="translate(0 14)" />
+    <path fill="url(#az2)" d="M89 0l57.3 160.6-54.6 51.2L12.5 211.8z" transform="translate(0 14)" opacity=".5" />
+    <path fill="url(#az3)" d="M243.5 211.8l-146.8 0 98.4-75.9 57.6-68.1z" transform="translate(0 14)" />
+  </svg>
+)
+
 const CATEGORIES: Category[] = [
   {
     label: 'Frontend',
     skills: [
       { name: 'React',      color: '#61dafb', svg: <ReactSvg /> },
-      { name: 'TypeScript', color: '#3178c6', svg: <TypeScriptSvg /> },
       { name: 'JavaScript', color: '#f7df1e', svg: <JavaScriptSvg /> },
-      { name: 'Angular',    color: '#dd0031', svg: <AngularSvg /> },
-      { name: 'HTML',       color: '#e34f26', svg: <HtmlSvg /> },
-      { name: 'CSS',        color: '#1572b6', svg: <CssSvg /> },
+      { name: 'TypeScript', color: '#3178c6', svg: <TypeScriptSvg /> },
+      { name: 'HTML5',      color: '#e34f26', svg: <HtmlSvg /> },
+      { name: 'CSS3',       color: '#1572b6', svg: <CssSvg /> },
+      { name: 'Tailwind',   color: '#0ed7b5', svg: <TailwindSvg /> },
     ],
   },
   {
     label: 'Backend',
     skills: [
-      { name: 'Python',  color: '#3776ab', svg: <PythonSvg /> },
-      { name: 'Node.js', color: '#539e43', svg: <NodeSvg /> },
+      { name: 'PHP',    color: '#8892bf', svg: <PhpSvg /> },
+      { name: 'Python', color: '#3776ab', svg: <PythonSvg /> },
+      { name: 'MySQL',  color: '#4479a1', svg: <NodeSvg /> },
     ],
   },
   {
@@ -176,10 +228,11 @@ const CATEGORIES: Category[] = [
   {
     label: 'Ferramentas',
     skills: [
-      { name: 'Git',    color: '#f05032', svg: <GitSvg /> },
-      { name: 'GitHub', color: '#e0e0e0', svg: <GitHubSvg /> },
-      { name: 'Docker', color: '#2396ed', svg: <DockerSvg /> },
-      { name: 'Figma',  color: '#a259ff', svg: <FigmaSvg /> },
+      { name: 'Git',        color: '#f05032',  svg: <GitSvg /> },
+      { name: 'GitHub',     color: '#e0e0e0',  svg: <GitHubSvg /> },
+      { name: 'Figma',      color: '#a259ff',  svg: <FigmaSvg /> },
+      { name: 'OutSystems', color: '#e3001b',  svg: <OutSystemsSvg /> },
+      { name: 'Azure',      color: '#0078d4',  svg: <AzureSvg /> },
     ],
   },
 ]

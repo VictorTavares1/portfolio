@@ -15,63 +15,34 @@ export interface Project {
 export const PROJECTS: Project[] = [
   {
     id: 1,
-    title: 'Portfolio Pessoal',
-    shortDesc: 'Este mesmo portfólio — React + TypeScript + Framer Motion.',
+    title: 'Roomly — Gestão de Salas',
+    shortDesc: 'Aplicação web completa de gestão de reservas e manutenção de salas escolares.',
     longDesc:
-      'Portfólio pessoal construído com React, TypeScript e Framer Motion. Inclui animações de scroll, ecrã de intro com dactilografia, cursor personalizado e deploy automático no GitHub Pages via gh-pages.',
+      'Projeto de fim de curso (PAP) — aplicação web full-stack para gestão de reservas, horários e manutenção de salas em ambiente escolar. Dashboard com gráficos e calendário interativo, sistema de tickets de manutenção e autenticação com múltiplos roles (Admin, Funcionário, Professores). Em desenvolvimento activo.',
     category: 'Frontend',
-    tags: ['React', 'TypeScript', 'Framer Motion', 'CSS Modules'],
+    tags: ['React 19', 'Vite', 'Tailwind CSS', 'PHP', 'MySQL', 'REST API'],
     gradient: 'linear-gradient(135deg, #06b6d4 0%, #a855f7 100%)',
-    githubUrl: 'https://github.com/VictorTavares1/portfolio',
+    githubUrl: 'https://github.com/VictorTavares1/roomly',
   },
   {
     id: 2,
-    title: 'Dashboard Analytics',
-    shortDesc: 'Dashboard interativo com gráficos em tempo real.',
+    title: 'Portfólio Pessoal',
+    shortDesc: 'Este portfólio — React + TypeScript + Framer Motion + CSS Modules.',
     longDesc:
-      'Dashboard web com visualização de dados em tempo real. Consome uma API REST, apresenta gráficos interativos com filtros por período e exportação em CSV. Construído em Angular com serviços RxJS.',
+      'Portfólio pessoal construído com React, TypeScript e Framer Motion. Inclui ecrã de intro com dactilografia, cursor luminoso personalizado, orbs atmosféricos, secções animadas ao scroll (Skills em hexágonos, linha temporal de experiência, modal de projetos) e deploy automático no GitHub Pages.',
     category: 'Frontend',
-    tags: ['Angular', 'RxJS', 'TypeScript', 'REST API'],
+    tags: ['React', 'TypeScript', 'Framer Motion', 'CSS Modules'],
     gradient: 'linear-gradient(135deg, #3178c6 0%, #06b6d4 100%)',
+    githubUrl: 'https://github.com/VictorTavares1/portfolio',
   },
   {
     id: 3,
-    title: 'Detetor de Objetos',
-    shortDesc: 'Deteção em tempo real com YOLOv8 e OpenCV.',
+    title: 'Near Partner — Sistema Interno',
+    shortDesc: 'Nova funcionalidade desenvolvida em contexto de estágio empresarial.',
     longDesc:
-      'Pipeline de visão computacional para deteção de objetos em tempo real usando YOLOv8 e OpenCV. Suporta feed de câmara ao vivo e vídeos pré-gravados. Testado em contexto académico com dataset personalizado.',
-    category: 'IA',
-    tags: ['Python', 'OpenCV', 'YOLOv8', 'Computer Vision'],
-    gradient: 'linear-gradient(135deg, #5c3ee8 0%, #a855f7 100%)',
-  },
-  {
-    id: 4,
-    title: 'API de Autenticação',
-    shortDesc: 'REST API com JWT, refresh tokens e rate limiting.',
-    longDesc:
-      'API de autenticação construída em Node.js com Express. Implementa JWT com refresh tokens, hashing bcrypt, rate limiting por IP e documentação Swagger. Base para projetos que requerem autenticação segura.',
+      'Durante o estágio na Near Partner (Jun–Jul 2025), desenvolvi uma funcionalidade nova num sistema interno já existente. Trabalhei em contexto de equipa real com Git/GitHub no fluxo diário, participei em tarefas de desenvolvimento e testes de software e adquiri experiência prática em metodologias empresariais.',
     category: 'Backend',
-    tags: ['Node.js', 'Express', 'JWT', 'PostgreSQL'],
+    tags: ['Git', 'GitHub', 'Trabalho em Equipa'],
     gradient: 'linear-gradient(135deg, #539e43 0%, #06b6d4 100%)',
-  },
-  {
-    id: 5,
-    title: 'Classificador de Imagens',
-    shortDesc: 'CNN treinada para classificação com TensorFlow.',
-    longDesc:
-      'Rede neuronal convolucional treinada para classificação de imagens em 10 categorias. Utiliza transfer learning com MobileNetV2, data augmentation e treino em Google Colab. Precisão de 94% no conjunto de teste.',
-    category: 'IA',
-    tags: ['Python', 'TensorFlow', 'Keras', 'Transfer Learning'],
-    gradient: 'linear-gradient(135deg, #ff6f00 0%, #ec4899 100%)',
-  },
-  {
-    id: 6,
-    title: 'E-Commerce UI',
-    shortDesc: 'Loja online com carrinho, filtros e checkout.',
-    longDesc:
-      'Interface de e-commerce com catálogo de produtos, filtros por categoria e preço, carrinho persistente via localStorage e fluxo de checkout multi-etapas. Construído em React com Context API.',
-    category: 'Frontend',
-    tags: ['React', 'Context API', 'CSS Modules', 'Responsive'],
-    gradient: 'linear-gradient(135deg, #ec4899 0%, #f5d07a 100%)',
   },
 ]
