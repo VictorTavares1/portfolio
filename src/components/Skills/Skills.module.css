@@ -19,108 +19,142 @@
   margin-right: 0.5rem;
 }
 
+/* ── Categorias ── */
+.categories {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+
+.category {}
+
+.catLabel {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #6b7280;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin: 0 0 1.5rem 0.25rem;
+}
+
+.catBracket {
+  color: #a855f7;
+  margin: 0 0.2rem;
+}
+
 /* ── Grelha ── */
 .grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5rem 1rem;
-  justify-content: center;
+  gap: 1.2rem 0.9rem;
 }
 
 /* ── Hexágono ── */
-/*
-  Técnica clip-path polygon para hexágono flat-top:
-  os 6 pontos de um hexágono apontado em cima.
-*/
 .hexWrap {
-  width: 130px;
-}
-
-.hex {
   position: relative;
-  width: 130px;
-  height: 148px;
-  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-  background: #100d1a;
-  cursor: default;
-  transition: background 0.3s ease;
+  width: 140px;
+  height: 158px;
 }
 
-/* Camada de brilho por cima — opacity 0, sobe no hover */
-.hex::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-  background: radial-gradient(circle at 50% 50%, var(--skill-color), transparent 70%);
-  opacity: 0;
-  transition: opacity 0.35s ease;
-}
-
-.hex:hover::before {
-  opacity: 0.22;
-}
-
-/* Borda simulada: hexágono ligeiramente maior atrás */
+/* borda — hexágono ligeiramente maior por trás */
 .hexWrap::before {
   content: '';
   position: absolute;
-  width: 130px;
-  height: 148px;
+  inset: -2px;
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-  background: linear-gradient(135deg, rgba(168, 85, 247, 0.35), rgba(6, 182, 212, 0.2));
-  top: -2px;
-  left: -2px;
-  width: 134px;
-  height: 152px;
+  background: linear-gradient(
+    135deg,
+    rgba(168, 85, 247, 0.4),
+    rgba(6, 182, 212, 0.25)
+  );
   transition: background 0.35s ease;
-  z-index: -1;
+  z-index: 0;
 }
 
 .hexWrap:hover::before {
-  background: linear-gradient(135deg, color-mix(in srgb, var(--skill-color) 60%, transparent), rgba(6, 182, 212, 0.3));
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--skill-color) 55%, rgba(168,85,247,0.5)),
+    color-mix(in srgb, var(--skill-color) 30%, rgba(6,182,212,0.3))
+  );
 }
 
-.hexWrap {
-  position: relative;
+.hex {
+  position: absolute;
+  inset: 2px;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  background: #0d0b17;
+  cursor: default;
+  overflow: hidden;
+  z-index: 1;
+  transition: background 0.35s ease;
+}
+
+/* glow radial — elemento separado para melhor controlo de opacidade */
+.glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at 50% 55%,
+    var(--skill-color) 0%,
+    transparent 68%
+  );
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  z-index: 0;
+}
+
+.hex:hover .glow {
+  opacity: 0.35;
+}
+
+.hex:hover {
+  background: color-mix(in srgb, var(--skill-color) 8%, #0d0b17);
 }
 
 .hexInner {
-  position: absolute;
-  inset: 0;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
-  z-index: 1;
+  gap: 0.55rem;
 }
 
 .logo {
-  width: 44px;
-  height: 44px;
+  width: 50px;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: transform 0.3s ease;
 }
 
 .logo svg {
   width: 100%;
   height: 100%;
-  transition: filter 0.3s ease, transform 0.3s ease;
+  transition: filter 0.3s ease;
+}
+
+.hex:hover .logo {
+  transform: scale(1.12) translateY(-2px);
 }
 
 .hex:hover .logo svg {
-  filter: drop-shadow(0 0 8px var(--skill-color));
-  transform: scale(1.1);
+  filter: drop-shadow(0 0 10px var(--skill-color))
+          drop-shadow(0 0 20px color-mix(in srgb, var(--skill-color) 50%, transparent));
 }
 
 .label {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 0.62rem;
+  font-size: 0.6rem;
   font-weight: 600;
-  color: #9ca3af;
-  letter-spacing: 0.08em;
+  color: #6b7280;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   transition: color 0.3s ease;
 }
