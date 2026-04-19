@@ -3,6 +3,7 @@ import IntroScreen from './components/IntroScreen/IntroScreen'
 import Hero from './components/Hero/Hero'
 import About from './components/About/About'
 import Skills from './components/Skills/Skills'
+import Projects from './components/Projects/Projects'
 
 function App() {
   const [intro, setIntro] = useState(true)
@@ -16,6 +17,7 @@ function App() {
       <Hero />
       <About />
       <Skills />
+      <Projects />
       {/* próximas secções aqui */}
     </main>
   )

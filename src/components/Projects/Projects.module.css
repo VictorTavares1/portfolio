@@ -1,0 +1,247 @@
+.root {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 8rem 2rem;
+}
+
+.sectionTitle {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 700;
+  color: #f5f5f5;
+  letter-spacing: 0.04em;
+  margin: 0 0 2.5rem;
+}
+
+.accent {
+  color: #06b6d4;
+  margin-right: 0.5rem;
+}
+
+/* ── Pills de filtro ── */
+.filters {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+.pill {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.45rem 1.1rem;
+  border-radius: 3px;
+  border: 1px solid rgba(168, 85, 247, 0.25);
+  background: transparent;
+  color: #6b7280;
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
+}
+
+.pill:hover {
+  color: #f5f5f5;
+  border-color: rgba(168, 85, 247, 0.5);
+}
+
+.pillActive {
+  color: #f5f5f5;
+  border-color: #a855f7;
+  background: rgba(168, 85, 247, 0.12);
+}
+
+/* ── Grelha 3 colunas ── */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+}
+
+@media (max-width: 900px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 560px) {
+  .grid { grid-template-columns: 1fr; }
+}
+
+/* ── Cartão ── */
+.card {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  border-radius: 6px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* fundo gradiente de cor */
+.cardBg {
+  position: absolute;
+  inset: 0;
+  opacity: 0.25;
+  transition: opacity 0.4s ease;
+}
+
+.card:hover .cardBg {
+  opacity: 0.4;
+}
+
+/* escurecimento base */
+.cardOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(5, 5, 5, 0.92) 0%,
+    rgba(5, 5, 5, 0.5) 50%,
+    rgba(5, 5, 5, 0.2) 100%
+  );
+  transition: opacity 0.4s ease;
+}
+
+.card:hover .cardOverlay {
+  opacity: 0;
+}
+
+/* ── Hover layer ── */
+.hoverLayer {
+  position: absolute;
+  inset: 0;
+  background: rgba(5, 5, 5, 0.82);
+  backdrop-filter: blur(2px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 1.8rem;
+  gap: 0.8rem;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.card:hover .hoverLayer {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hoverCategory {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.62rem;
+  font-weight: 600;
+  color: #a855f7;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+}
+
+.hoverTitle {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: clamp(0.95rem, 1.8vw, 1.15rem);
+  font-weight: 700;
+  color: #f5f5f5;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.hoverTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.hoverTag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.6rem;
+  font-weight: 600;
+  color: #06b6d4;
+  background: rgba(6, 182, 212, 0.1);
+  border: 1px solid rgba(6, 182, 212, 0.2);
+  border-radius: 2px;
+  padding: 0.2rem 0.5rem;
+  letter-spacing: 0.04em;
+}
+
+.hoverLinks {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 0.3rem;
+}
+
+.iconLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  color: #9ca3af;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  text-decoration: none;
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
+}
+
+.iconLink:hover {
+  color: #f5f5f5;
+  border-color: rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.detailBtn {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: #a855f7;
+  background: rgba(168, 85, 247, 0.08);
+  border: 1px solid rgba(168, 85, 247, 0.3);
+  border-radius: 4px;
+  padding: 0.42rem 0.85rem;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.detailBtn:hover {
+  background: rgba(168, 85, 247, 0.18);
+  border-color: rgba(168, 85, 247, 0.6);
+  color: #f5f5f5;
+}
+
+/* ── Footer sempre visível ── */
+.cardFooter {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.2rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+}
+
+.card:hover .cardFooter {
+  opacity: 0;
+}
+
+.footerCategory {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.6rem;
+  font-weight: 600;
+  color: #a855f7;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.footerTitle {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #f5f5f5;
+}
