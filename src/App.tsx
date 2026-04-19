@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import IntroScreen from './components/IntroScreen/IntroScreen'
 import Hero from './components/Hero/Hero'
+import About from './components/About/About'
 
 function App() {
   const [intro, setIntro] = useState(true)
@@ -12,6 +13,7 @@ function App() {
   return (
     <main style={{ background: '#050505' }}>
       <Hero />
+      <About />
       {/* próximas secções aqui */}
     </main>
   )
