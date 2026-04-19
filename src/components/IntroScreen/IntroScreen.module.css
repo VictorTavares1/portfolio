@@ -1,0 +1,105 @@
+.root {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: #050505;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid #06b6d4;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.content {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nameWrapper {
+  min-height: 4rem;
+  display: flex;
+  align-items: center;
+}
+
+.name {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  color: #f5f5f5;
+  letter-spacing: 0.04em;
+}
+
+.cursor {
+  display: inline-block;
+  color: #06b6d4;
+  margin-left: 2px;
+}
+
+.subtitle {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: clamp(0.65rem, 1.5vw, 0.8rem);
+  color: #06b6d4;
+  letter-spacing: 0.3em;
+  margin: 0;
+}
+
+/* Botão com borda dourada animada */
+.enterBtn {
+  position: relative;
+  margin-top: 1rem;
+  padding: 0.75rem 2.5rem;
+  background: transparent;
+  color: #f5d07a;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.enterBtn span {
+  position: absolute;
+  background: #f5d07a;
+}
+
+/* Bordas animadas — percorrem o perímetro */
+.btnBorderTop {
+  top: 0; left: -100%;
+  width: 100%; height: 1px;
+  animation: slideRight 1.6s linear infinite;
+}
+.btnBorderRight {
+  top: -100%; right: 0;
+  width: 1px; height: 100%;
+  animation: slideDown 1.6s linear infinite 0.4s;
+}
+.btnBorderBottom {
+  bottom: 0; right: -100%;
+  width: 100%; height: 1px;
+  animation: slideLeft 1.6s linear infinite 0.8s;
+}
+.btnBorderLeft {
+  bottom: -100%; left: 0;
+  width: 1px; height: 100%;
+  animation: slideUp 1.6s linear infinite 1.2s;
+}
+
+@keyframes slideRight { to { left: 100%; } }
+@keyframes slideDown  { to { top: 100%; } }
+@keyframes slideLeft  { to { right: 100%; } }
+@keyframes slideUp    { to { bottom: 100%; } }
